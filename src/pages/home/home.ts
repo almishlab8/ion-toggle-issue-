@@ -6,7 +6,8 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  toggle02: boolean = true;
+  
   constructor(public navCtrl: NavController) {
 
   }

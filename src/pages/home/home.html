@@ -7,8 +7,38 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list no-border >
+    
+        <ion-list-header>
+      Examples 
+        </ion-list-header>
+  
+        <ion-item>
+          <ion-toggle  [(ngModel)]="toggle01" checked="true"></ion-toggle>
+          <ion-label>
+            With ngModel
+          </ion-label>
+          <ion-icon name='menu' item-start></ion-icon>
+         
+        </ion-item>
+
+        <ion-item>
+          <ion-toggle color="danger"  checked="true"></ion-toggle>
+          <ion-label>
+           Without ngModel
+          </ion-label>
+          <ion-icon name='menu' item-start></ion-icon>
+       
+        </ion-item>
+
+        <ion-item>
+          <ion-toggle  [(ngModel)]="toggle02" (ionChange)="toggleTwo()"></ion-toggle>
+          <ion-label>
+            Trying to fix this issue <!-- Add ngModel = toggle02 thats = True in home.ts -->
+          </ion-label>
+          <ion-icon name='menu' item-start></ion-icon>
+         
+        </ion-item>
+    
+  </ion-list>
 </ion-content>
